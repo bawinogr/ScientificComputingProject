@@ -37,13 +37,13 @@ int main(){
 }
 
 void test_failed(string tname){
-  cout << tname << " test failed." << endl;
+  cout << tname << " ...Test Failed." << endl;
 
   return;
 }
 
 void test_passed(string tname){
-  cout << tname << " test passed." << endl;
+  cout << tname << " ...Test Passed." << endl;
 }
 
 
@@ -59,10 +59,10 @@ void test_HF_en(){
   double En = hf_main(ao,occ,path,V,C_mo,evals);
 
   if (abs(abs(En)-74.9421)<=pow(10,-4)){
-    test_passed("HF Energy");
+    test_passed("HF Energy       ");
   }
   else{
-    test_failed("HF Energy");
+    test_failed("HF Energy       ");
   }
   
   return;
@@ -86,10 +86,10 @@ void test_dens_mat(){
   }
   
   if (Ptrace==28){
-    test_passed("Density Matrix");
+    test_passed("Density Matrix  ");
   }
   else{
-    test_failed("Density Matrix");
+    test_failed("Density Matrix  ");
   }
 
   return;
@@ -104,10 +104,10 @@ void test_En_nuc(){
   double En_nuc = read_nuc_en(path);
 
   if (abs(abs(En_nuc)-8.002367061810450)<=pow(10,-8)){
-    test_passed("Nuclear Energy");
+    test_passed("Nuclear Energy  ");
   }
   else{
-    test_failed("Nuclear Energy");
+    test_failed("Nuclear Energy  ");
   }
 
   return;
