@@ -23,6 +23,15 @@ MESSAGE(STATUS "${PROJECT_NAME}_TRIBITS_DIR - '${${PROJECT_NAME}_TRIBITS_DIR}'")
 INCLUDE(${${PROJECT_NAME}_TRIBITS_DIR}/TriBITS.cmake)
 
 #
+
+#Enable Tests always
+#
+SET(${PROJECT_NAME}_ENABLE_Group_Project ON CACHE BOOL "")
+
+SET(TPL_ENABLE_MPI OFF CACHE BOOL "")
+
+##add_subdirectory(Test)
+
 #Process the TriBITS Project
 #
 TRIBITS_PROJECT()
